@@ -45,3 +45,6 @@ yarn-error.log*
 
 # Output der CLI
 /.angular/cache/
+
+
+/mariadb_data/
