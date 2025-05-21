@@ -1,31 +1,77 @@
 @use '../../styles/theme' as *;
 @use 'sass:color';
 
+// Layout-Grundstruktur
 .todo-overview {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: $font-family;
-    background-color: $background-color;
+    background-color: color.scale($background-color, $lightness: -10%); // statt weiss etwas dunkler
     color: $text-color;
 }
 
-.header,
-.footer {
-    background-color: $primary-color;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    color: white;
-    padding: 0.75rem 1rem;
-    text-align: center;
-}
+// ----------------------------------------
+// Header
+// ----------------------------------------
 
 .header {
-    h1 {
-        margin: 0;
-        font-size: 1.75rem;
-        font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(245, 245, 245, 0.8); // sanfteres Off-White
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid lighten($text-color, 70%);
+    padding: 0.75rem 1.5rem;
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: $text-color;
+        }
+    }
+
+    .nav {
+        display: flex;
+        gap: 1.5rem;
+
+        .nav-link {
+            text-decoration: none;
+            font-weight: 500;
+            color: $text-color;
+            transition: $transition;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
     }
 }
+
+// ----------------------------------------
+// Main / ToDo-Liste
+// ----------------------------------------
 
 .main {
     flex: 1;
@@ -42,24 +88,58 @@
         max-width: 600px;
     }
 
-    .todo-item {
-        background-color: white;
-        padding: 1rem 1.5rem;
-        border-radius: $border-radius;
-        box-shadow: $box-shadow;
-        transition: $transition;
-        cursor: pointer;
+    //   .todo-item {
+    //     background-color: color.scale($background-color, $lightness: 5%); // zarter Kontrast
+    //     padding: 1rem 1.5rem;
+    //     border-radius: $border-radius;
+    //     box-shadow: $box-shadow;
+    //     transition: $transition;
+    //     cursor: pointer;
 
-        &:hover {
-            background-color: color.adjust($primary-color, $lightness: 40%);
+    //     &:hover {
+    //       background-color: color.scale($primary-color, $lightness: 80%);
+    //     }
+    //   }
+}
+
+.todo-item {
+    background-color: color.scale($background-color, $lightness: 5%);
+    padding: 1rem 1.5rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: $transition;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .todo-text {
+        flex: 1;
+    }
+
+    .delete-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.3rem;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            stroke: $text-color;
+            transition: $transition;
+        }
+
+        &:hover .icon {
+            stroke: $accent-color;
         }
     }
 }
 
-.footer {
-    font-size: 0.85rem;
-    border-top: 1px solid lighten($text-color, 80%);
-}
+// ----------------------------------------
+// Add-Button
+// ----------------------------------------
 
 .add-button {
     position: fixed;
@@ -87,85 +167,63 @@
     }
 }
 
+// ----------------------------------------
+// Footer
+// ----------------------------------------
 
 .footer {
-    padding: 0.75rem 1rem;
-    background: linear-gradient(90deg, $primary-color, $secondary-color);
-    color: white;
-    font-size: 0.85rem;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(8px);
+    background-color: $dark-background;
+    color: $dark-text;
+    font-family: $font-family;
 
     .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-
-        .footer-text {
-            font-weight: 500;
-        }
-
-        .footer-year {
-            opacity: 0.8;
-        }
-    }
-}
-
-
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid lighten($text-color, 80%);
-    padding: 0.75rem 1.5rem;
-
-    .header-content {
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 2rem;
     }
 
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+    .footer-section {
+        flex: 1;
+        min-width: 200px;
 
-        .title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: $text-color;
-        }
-
-        .icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
-    .nav {
-        display: flex;
-        gap: 1.5rem;
-
-        .nav-link {
-            text-decoration: none;
-            font-weight: 500;
-            color: $text-color;
-            transition: $transition;
-
-            &:hover {
+        &.brand {
+            .logo-text {
+                font-size: 1.5rem;
+                font-weight: 600;
                 color: $primary-color;
             }
+
+            .slogan {
+                margin-top: 0.5rem;
+                font-size: 0.95rem;
+                opacity: 0.8;
+            }
+        }
+
+        &.links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .footer-link {
+                text-decoration: none;
+                color: $dark-text;
+                opacity: 0.85;
+                transition: $transition;
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+
+        &.copyright {
+            align-self: flex-end;
+            font-size: 0.85rem;
+            opacity: 0.6;
         }
     }
 }

@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  todos: string[] = ['Einkaufen', 'E-Mails beantworten', 'Workout'];
 
-}
+  deleteTodo(todo: string): void {
+    this.todos = this.todos.filter(t => t !== todo);
+  }}
