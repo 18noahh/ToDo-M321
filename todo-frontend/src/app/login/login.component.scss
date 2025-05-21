@@ -1,0 +1,64 @@
+@use '../../styles/theme' as *;
+@use 'sass:color';
+
+.login-container {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 3rem auto;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid color.adjust($text-color, $lightness: 40%);
+    border-radius: $border-radius;
+    font-size: 1rem;
+    transition: $transition;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    }
+  }
+
+  button {
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%);
+    }
+  }
+
+  .forgot-password {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: $secondary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
