@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|c:\\users\\joelt\\source\\repos\\webapitodo\\webapitodo\\controller\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|solutionrelative:webapitodo\\controller\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|c:\\users\\joelt\\source\\repos\\webapitodo\\webapitodo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|solutionrelative:webapitodo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|c:\\users\\joelt\\source\\repos\\webapitodo\\webapitodo\\models\\todomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|solutionrelative:webapitodo\\models\\todomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|c:\\users\\joelt\\source\\repos\\webapitodo\\webapitodo\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|solutionrelative:webapitodo\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|c:\\users\\joelt\\source\\repos\\webapitodo\\webapitodo\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|solutionrelative:webapitodo\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|c:\\users\\joelt\\source\\repos\\webapitodo\\webapitodo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D6A172-64F2-4CCA-B9D8-52E57CCBD105}|WebapiTodo\\WebapiTodo.csproj|solutionrelative:webapitodo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "WebapiTodo\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Models\\UserModel.cs",
+              "RelativeToolTip": "WebapiTodo\\Models\\UserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T13:10:47.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TodoModel.cs",
+              "DocumentMoniker": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Models\\TodoModel.cs",
+              "RelativeDocumentMoniker": "WebapiTodo\\Models\\TodoModel.cs",
+              "ToolTip": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Models\\TodoModel.cs",
+              "RelativeToolTip": "WebapiTodo\\Models\\TodoModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T13:10:30.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Controller\\UserController.cs",
+              "RelativeDocumentMoniker": "WebapiTodo\\Controller\\UserController.cs",
+              "ToolTip": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Controller\\UserController.cs",
+              "RelativeToolTip": "WebapiTodo\\Controller\\UserController.cs",
+              "ViewState": "AQIAAAYAAACQXM0dzG0gwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T13:09:12.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodoController.cs",
+              "DocumentMoniker": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Controller\\TodoController.cs",
+              "RelativeDocumentMoniker": "WebapiTodo\\Controller\\TodoController.cs",
+              "ToolTip": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Controller\\TodoController.cs",
+              "RelativeToolTip": "WebapiTodo\\Controller\\TodoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T12:51:50.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Program.cs",
+              "RelativeDocumentMoniker": "WebapiTodo\\Program.cs",
+              "ToolTip": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\Program.cs",
+              "RelativeToolTip": "WebapiTodo\\Program.cs",
+              "ViewState": "AQIAAAAAAAAwzwKNNTL+vw8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T12:50:50.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\appsettings.json",
+              "RelativeDocumentMoniker": "WebapiTodo\\appsettings.json",
+              "ToolTip": "C:\\Users\\joelt\\source\\repos\\WebapiTodo\\WebapiTodo\\appsettings.json",
+              "RelativeToolTip": "WebapiTodo\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-21T12:49:19.376Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
