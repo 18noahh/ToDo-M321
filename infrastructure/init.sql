@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS todo_app;
+
+USE todo_app;
+
+CREATE TABLE IF NOT EXISTS user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS todo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    userId INT,
+    FOREIGN KEY (userId) REFERENCES user(id)
+);
