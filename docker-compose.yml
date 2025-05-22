@@ -15,7 +15,21 @@ services:
       - ./mariadb_data:/var/lib/mysql
     networks:
       - todo-net
-
+  backend:
+    build:
+      context: .
+      dockerfile: todo-backend/Dockerfile
+    ports:
+      - "5000:8080"
+    depends_on:
+      - mariadb
+    environment:
+      - MARIADB_CONNECTION=server=mariadb;port=3306;database=todo_app;user=root;password=root
+    volumes:
+      - ./todo-backend/WebapiTodo/appsettings.json:/app/appsettings.json
+    networks:
+      - todo-net
+      
 networks:
   todo-net:
     driver: bridge
