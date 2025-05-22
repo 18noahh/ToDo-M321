@@ -12,7 +12,7 @@ namespace WebapiTodo.Controller
         private readonly string _connectionString;
         public TodoController(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("MariaDb")!;
+            _connectionString = Environment.GetEnvironmentVariable("MARIADB_CONNECTION")!;
         }
 
         [HttpGet]
@@ -27,8 +27,8 @@ namespace WebapiTodo.Controller
             await connection.OpenAsync();
 
             var query = todoId.HasValue
-                ? "SELECT id, title, description FROM todos WHERE id = @id"
-                : "SELECT id, title, description FROM todos";
+                ? "SELECT id, title, description FROM todo WHERE id = @id"
+                : "SELECT id, title, description FROM todo";
 
             using var cmd = new MySqlCommand(query, connection);
             if (todoId.HasValue)
@@ -60,7 +60,7 @@ namespace WebapiTodo.Controller
             using var connection = new MySqlConnection(_connectionString);
             await connection.OpenAsync();
 
-            var query = "INSERT INTO todos (title, description) VALUES (@title, @description)";
+            var query = "INSERT INTO todo (title, description) VALUES (@title, @description)";
             using var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@title", todo.Title);
             cmd.Parameters.AddWithValue("@description", todo.Description);
@@ -78,7 +78,7 @@ namespace WebapiTodo.Controller
             using var connection = new MySqlConnection(_connectionString);
             await connection.OpenAsync();
 
-            var query = "DELETE FROM todos WHERE id = @id";
+            var query = "DELETE FROM todo WHERE id = @id";
             using var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@id", todoId);
 
@@ -102,7 +102,7 @@ namespace WebapiTodo.Controller
             using var connection = new MySqlConnection(_connectionString);
             await connection.OpenAsync();
 
-            var query = "SELECT COUNT(*) FROM users WHERE email = @Email AND password = @Password";
+            var query = "SELECT COUNT(*) FROM user WHERE email = @Email AND password = @Password";
             using var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@Email", email);
             cmd.Parameters.AddWithValue("@Password", password);
