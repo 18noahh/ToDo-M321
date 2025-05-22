@@ -19,6 +19,7 @@ services:
     build:
       context: .
       dockerfile: todo-backend/Dockerfile
+    container_name: todo-backend
     ports:
       - "5000:8080"
     depends_on:
