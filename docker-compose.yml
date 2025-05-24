@@ -20,14 +20,13 @@ services:
       context: .
       dockerfile: todo-backend/Dockerfile
     ports:
-      - "5000:80"
+      - "5000:8080"
     depends_on:
       - mariadb
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
       - MARIADB_CONNECTION=server=mariadb;port=3306;database=todo_app;user=root;password=root
     volumes:
-      - ./todo-backend\WebapiTodo/appsettings.json:/app/appsettings.json
+      - ./todo-backend/WebapiTodo/appsettings.json:/app/appsettings.json
     networks:
       - todo-net
       
