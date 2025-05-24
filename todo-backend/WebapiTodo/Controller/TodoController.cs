@@ -18,6 +18,7 @@ namespace WebapiTodo.Controller
         [HttpGet]
         public async Task<IActionResult> GetTodos([FromQuery] int? todoId)
         {
+
             if (!await UserIsValidAsync())
                 return Unauthorized("Invalid credentials");
 
@@ -44,9 +45,6 @@ namespace WebapiTodo.Controller
                     Description = reader.GetString("description")
                 });
             }
-
-            if (!todos.Any())
-                return NotFound();
 
             return Ok(todos);
         }

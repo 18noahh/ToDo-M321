@@ -17,4 +17,4 @@ RUN dotnet publish -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WebapiTodo.dll"]
+ENTRYPOINT ["dotnet", "WebapiTodo.dll", "--urls http://0.0.0.0:8080"]

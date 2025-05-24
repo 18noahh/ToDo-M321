@@ -21,6 +21,8 @@ services:
     container_name: todo-backend
     depends_on:
       - mariadb
+    ports:
+      - "8080:8080"
     environment:
       - MARIADB_CONNECTION=server=mariadb;port=3306;database=todo_app;user=root;password=root
     volumes:
@@ -28,22 +30,6 @@ services:
     networks:
       - todo-net
       
-  frontend:
-    container_name: todo-frontend
-    build:
-      context: .
-      dockerfile: todo-frontend/Dockerfile
-    restart: unless-stopped
-    logging:
-      options:
-        max-size: 50m
-    ports:
-      - "3000:80"
-    depends_on:
-      - backend
-    networks:
-      - todo-net
-
 networks:
   todo-net:
     driver: bridge
