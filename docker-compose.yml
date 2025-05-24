@@ -38,22 +38,9 @@ services:
       options:
         max-size: 50m
     ports:
-      - "3000:4200"
+      - "3000:80"
     depends_on:
       - backend
-    networks:
-      - todo-net
-
-  nginx-proxy-manager:
-    image: jc21/nginx-proxy-manager:latest
-    restart: always
-    ports:
-      - "80:80"
-      - "81:81" # Admin UI
-      - "443:443"
-    volumes:
-      - ./nginx/data:/data
-      - ./nginx/letsencrypt:/etc/letsencrypt
     networks:
       - todo-net
 
