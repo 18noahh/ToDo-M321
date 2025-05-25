@@ -19,6 +19,8 @@ Der Container hat ein Volume-Mapping auf das Host-System, damit die Daten auch n
 
 ## todo-backend
 Dies ist die API, welche die Manipulation der Daten gegen Aussen zur Verfügung stellt.
+<br>
+Der Service ist über **Port 8080** aufrufbar.
 
 ### Authentifizierung
 Folgene Header müssen bei jeder Anfrage mitgegeben werden:
